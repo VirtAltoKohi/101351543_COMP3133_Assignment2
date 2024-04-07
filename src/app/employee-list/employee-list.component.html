@@ -1,0 +1,57 @@
+<h1>Employee List</h1>
+<form>
+  <button type="button" (click)="navigateToLogin()">Log Out</button>
+</form>
+<ul class="employee-list">
+  <li *ngFor="let employee of employees" class="employee-item">
+    <span class="employee-info">{{ employee.first_name }} {{ employee.last_name }} - {{ employee.email }}</span>
+    <div class="employee-actions">
+      <button (click)="showDetails(employee)" class="btn btn-details">More Details</button>
+      <button (click)="showUpdateForm(employee)" class="btn btn-update">Update</button>
+      <button (click)="deleteEmployee(employee._id)" class="btn btn-delete">Delete</button>
+    </div>
+  </li>
+</ul>
+
+<div *ngIf="selectedEmployeeForDetails" class="details-panel">
+  <h2>Employee Details</h2>
+  <p><strong>First Name:</strong> {{selectedEmployeeForDetails.first_name}}</p>
+  <p><strong>Last Name:</strong> {{selectedEmployeeForDetails.last_name}}</p>
+  <p><strong>Email:</strong> {{selectedEmployeeForDetails.email}}</p>
+  <p><strong>Gender:</strong> {{selectedEmployeeForDetails.gender}}</p>
+  <p><strong>Salary:</strong> {{selectedEmployeeForDetails.salary}}</p>
+  <button type="button" (click)="selectedEmployeeForDetails = null" class="btn btn-close">Close</button>
+</div>
+
+<div *ngIf="selectedEmployee" class="update-panel">
+  <h2>Update Employee</h2>
+  <form (ngSubmit)="updateEmployee()">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" [(ngModel)]="selectedEmployee.first_name" required>
+    
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" [(ngModel)]="selectedEmployee.last_name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="selectedEmployee.email" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="selectedEmployee.gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" [(ngModel)]="selectedEmployee.salary" required>
+    
+    <button type="submit" class="btn btn-submit">Submit Update</button>
+    <button type="button" (click)="cancelUpdate()" class="btn btn-cancel">Cancel</button>
+  </form>
+</div>
+
+<form class="create-employee-form">
+  <button type="button" (click)="navigateToEmployeeCreate()" class="btn btn-create">Create Employee</button>
+</form>
+<ng-template #loading><p>Loading employees...</p></ng-template>

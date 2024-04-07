@@ -1,0 +1,12 @@
+router-outlet {
+    float: none;
+}
+
+#title {
+    background-color: grey;
+    padding: 2px;
+    border-radius: 8px;
+}
+h1 {
+    color: white;
+}

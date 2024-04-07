@@ -1,0 +1,57 @@
+/* Style the container */
+.login-container {
+    width: 300px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form */
+form {
+    margin-bottom: 15px;
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style form inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Center align the button within the form */
+form button {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Additional styling for the heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}

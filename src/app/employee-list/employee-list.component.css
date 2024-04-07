@@ -1,0 +1,137 @@
+/* Global resets */
+body, html {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Page heading */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Logout button */
+form button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #c82333;
+}
+
+/* Employee list styles */
+.employee-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.employee-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.employee-info {
+    font-weight: bold;
+}
+
+.employee-actions {
+    margin-top: 10px;
+}
+
+/* Button styles within list items */
+.btn {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-details {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-update {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Details panel */
+.details-panel {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Update panel */
+.update-panel {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Form label styles */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="email"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Button styles within forms */
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-create {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Loading indicator */
+#loading {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #666;
+}

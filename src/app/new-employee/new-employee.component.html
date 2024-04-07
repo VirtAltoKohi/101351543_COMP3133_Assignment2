@@ -1,0 +1,24 @@
+<form (ngSubmit)="addEmployee()">
+    <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name" required>
+    <div *ngIf="errors.firstName">{{errors.firstName}}</div>
+  
+    <input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name" required>
+    <div *ngIf="errors.lastName">{{errors.lastName}}</div>
+  
+    <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+    <div *ngIf="errors.email">{{errors.email}}</div>
+  
+    <input type="number" [(ngModel)]="salary" name="salary" placeholder="Salary" required>
+    <div *ngIf="errors.salary">{{errors.salary}}</div>
+  
+    <select [(ngModel)]="gender" name="gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <div *ngIf="errors.gender">{{errors.gender}}</div>
+  
+    <button type="submit">Add Employee</button>
+  </form>
+  <button type="button" (click)="navigateToEmployeeList()">Employee List</button>
