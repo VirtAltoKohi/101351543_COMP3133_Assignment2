@@ -1,3 +1,4 @@
+<h1>Create Employee</h1>
 <form (ngSubmit)="addEmployee()">
     <input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name" required>
     <div *ngIf="errors.firstName">{{errors.firstName}}</div>
